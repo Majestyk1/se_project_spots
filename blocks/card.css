@@ -1,6 +1,6 @@
 
 .card__image {
-  height: 413px;
+  max-height: 413px;
   width: 100%;
   object-fit: cover;
   display: block;
