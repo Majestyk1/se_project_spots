@@ -60,8 +60,8 @@ This project focuses on creating a clean and responsive layout using Flexbox and
 - Open index.html in your browser to view the project locally.
 
 **Screenshots**
-![Desktop View](./images/screenshots/Screen%20Shot%202024-10-30%20at%202.46.49%20AM-min.png)
-![tablet View](./images/screenshots/Screen%20Shot%202024-10-30%20at%202.49.53%20AM-min.png)
-![mobile View](./images/screenshots/Screen%20Shot%202024-10-30%20at%202.47.33%20AM-min.png)
+![Desktop View](./images/screenshots/desktop-view.png)
+![tablet View](./images/screenshots/tablet-view.png)
+![mobile View](./images/screenshots/mobile-view.png)
 
 **Live Demo**
