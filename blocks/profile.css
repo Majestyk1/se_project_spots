@@ -32,7 +32,7 @@
 .profile__description {
   margin: 12px 0 0;
   opacity: 70%;
-  line-height: 16px;
+  line-height: 1.5;
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
@@ -44,8 +44,8 @@
 }
 
 .profile__edit-btn {
-  margin-top: 12px;
-  margin-right: auto;
+  margin: 12px 0 0;
+  padding: 0;
   background-color: #fcf5e5;
   border: none;
   display: flex;
@@ -63,10 +63,13 @@
 .profile__add-btn {
   margin-left: auto;
   background-color: #212121;
+  background-image: none;
+  box-shadow: none;
   min-width: 149px;
   min-height: 52px;
   color: #fcf5e5;
   border-radius: 10px;
+  border: none;
   margin-top: auto;
   display: flex;
   gap: 8px;
