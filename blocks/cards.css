@@ -4,7 +4,7 @@
 
 .cards__list {
   list-style-type: none;
-  padding: 0;
+  padding: 0 0 40px;
   margin: 0;
   display: grid;
   justify-content: center;
