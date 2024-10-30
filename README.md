@@ -47,12 +47,6 @@ This project focuses on creating a clean and responsive layout using Flexbox and
 - BEM Methodology: Organized CSS structure for easy maintenance.
 - Normalize.css: Cross-browser consistency.
 
-**Setup Instructions**
-
-- Clone the Repository: git clone https://github.com/Majestyk1/se_project_spots.git
-- Navigate into the Project Folder: cd se_project_spots
-- Open index.html in your browser to view the project locally.
-
 **Screenshots**
 ![Desktop View](./images/screenshots/desktop-view.png)
 ![tablet View](./images/screenshots/tablet-view.png)
@@ -61,3 +55,4 @@ This project focuses on creating a clean and responsive layout using Flexbox and
 **Live Demo**
 
 [Watch the Demo Video](https://drive.google.com/file/d/1qplcxO4ZO_lBPMoE7kLj9ZuK9QLaTG-J/view?usp=drive_link)
+[Spots - Live Demo](https://Majestyk1.github.io/se_project_spots/)

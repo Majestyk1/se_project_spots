@@ -26,21 +26,23 @@
 }
 
 .card__like-btn {
-  background-color: transparent;
   width: 23px;
   height: 20px;
+  background-image: url('../images/gray-like-icon.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  margin: 12px 0 0;
   border: none;
   cursor: pointer;
-  padding: 0;
-  margin-top: 12px;
+  transition: transform 0.3s ease, background-image 0.3s ease;
 }
 
-.card__like-btn .like-icon path {
-  transition: stroke 0.3s ease;
-}
-
-.card__like-btn:hover .like-icon path {
-  stroke: black;
+.card__like-btn:hover {
+  background-image: url('../images/dark-like-icon.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: scale(1.2);
 }
 
 @media screen and (max-width: 627px) {
