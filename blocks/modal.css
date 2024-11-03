@@ -75,6 +75,13 @@
   max-height: 16px;
 }
 
+.modal__input:-webkit-autofill {
+  background-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  box-shadow: 0 0 0px 1000px white inset;
+  -webkit-text-fill-color: #212121;
+}
+
 .modal__input:hover {
   cursor: pointer;
 }
