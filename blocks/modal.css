@@ -44,6 +44,7 @@
 .modal__close-btn:hover {
   cursor: pointer;
   opacity: 1;
+  background-repeat: no-repeat;
 }
 
 .modal__title {
@@ -89,10 +90,12 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 1;
+  transition: background-color 0.3s ease;
 }
 
 .modal__submit-btn:hover {
   cursor: pointer;
+  background-color: rgb(33 33 33 / 0.8);
 }
 
 @media screen and (max-width: 627px) {
