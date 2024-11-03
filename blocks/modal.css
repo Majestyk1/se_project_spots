@@ -75,6 +75,10 @@
   max-height: 16px;
 }
 
+.modal__input:hover {
+  cursor: pointer;
+}
+
 .modal__input::placeholder {
   color: #2121214D;
 }
