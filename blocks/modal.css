@@ -14,9 +14,9 @@
   padding: 0 20px;
 }
 
-/* .modal_opened {
+.modal_opened {
   visibility: visible;
-} */
+}
 
 .modal__container {
   background: #fff;
