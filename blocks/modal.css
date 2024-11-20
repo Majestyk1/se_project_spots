@@ -12,7 +12,8 @@
   visibility: hidden;
   font-family: poppins, Arial, Helvetica, sans-serif;
   padding: 0 20px;
-  transition: opacity 0.5s linear, visibility 0s linear 0.5s;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s ease-in;
   overflow: hidden;
 }
 
@@ -20,6 +21,11 @@
 .modal_opened {
   visibility: visible;
   opacity: 1;
+}
+
+.modal_closed {
+  visibility: hidden;
+  opacity: 0;
 }
 
 .modal__container {
@@ -30,6 +36,7 @@
   box-sizing: border-box;
   position: relative;
   border-radius: 8px;
+  transform: scale(0.8);
 }
 
 .modal__container_type_preview {
