@@ -12,10 +12,14 @@
   visibility: hidden;
   font-family: poppins, Arial, Helvetica, sans-serif;
   padding: 0 20px;
+  transition: opacity 0.5s linear, visibility 0s linear 0.5s;
+  overflow: hidden;
 }
+
 
 .modal_opened {
   visibility: visible;
+  opacity: 1;
 }
 
 .modal__container {
@@ -28,13 +32,52 @@
   border-radius: 8px;
 }
 
+.modal__container_type_preview {
+  background-color: transparent;
+  width: unset;
+  padding: 0;
+}
+
+.modal__image-container {
+  position: relative;
+}
+
+.modal__image {
+  width: 100%;
+  object-fit: contain;
+  margin: 0;
+  border-radius: 8px;
+  max-width: 80vw;
+  max-height: 80vh;
+}
+
+.modal__caption {
+    margin: 0;
+    padding: 4px 8px;
+    background-color: #212121;
+    color: #FFFFFF;
+    border-radius: 8px;
+    width: 400px;
+    height: auto;
+    min-height: 24px;
+    max-height: 50px;
+    max-width: fit-content;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    font-weight: 500;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
 .modal__close-btn {
   position: absolute;
   top: 32px;
   right: 50px;
   width: 40px;
   height: 40px;
-  background-image: url(../images/close-btn.svg);
+  background-image: url('../images/close-btn.svg');
   border: none;
   background-color: #fff;
   opacity: 0.4;
@@ -46,6 +89,20 @@
   opacity: 1;
   background-repeat: no-repeat;
 }
+
+.modal__close-btn_type_preview {
+  background-image: url('../images/close-light.svg');
+  background-color: transparent;
+  opacity: 1;
+  top: 0;
+  right: -52.5px;
+  position: absolute;
+}
+
+.modal__close-btn_type_preview:hover {
+ background-image: url('../images/close-dark.svg');
+}
+
 
 .modal__title {
   margin: 0 0 32px;
@@ -118,10 +175,19 @@
     padding: 12px;
   }
 
+  .modal__container_type_preview {
+    padding: 0;
+  }
+
   .modal__close-btn {
     top: 12px;
     right: 12px;
   }
+
+  .modal__close-btn_type_preview {
+    top: -45px;
+    right: 0;
+}
 
   .modal__title {
     font-size: 20px;
@@ -140,4 +206,24 @@
   .modal__submit-btn {
     width: 100%;
   }
+}
+
+@media screen and (max-width: 516px) {
+  .modal__image {
+    width: 100%;
+    max-width: unset;
+    max-height: unset;
+  }
+}
+
+@media screen and (max-width: 436px) {
+  .modal__caption {
+    width: 200px;
+  }
+}
+
+@media screen and (orientation: portrait) {
+
+}
+@media screen and (orientation: landscape) {
 }
