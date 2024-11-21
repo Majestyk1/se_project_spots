@@ -68,7 +68,6 @@ function openModal(modal) {
 }
 
 function closeModal(modal) {
-  console.log(modal.classList);
   modal.classList.remove("modal_opened");
 }
 
@@ -102,7 +101,6 @@ closeButtons.forEach((button) => {
   const modal = button.closest(".modal");
   button.addEventListener('click', () => closeModal(modal));
 });
-console.log(closeButtons);
 cardModalBtn.addEventListener("click", () => {
   openModal(cardModal);
 });
@@ -110,8 +108,11 @@ cardModalBtn.addEventListener("click", () => {
 editForm.addEventListener("submit", handleEditFormSubmit);
 cardForm.addEventListener("submit", handleAddCardSubmit);
 
+function renderCard(card, method = "prepend") {
+  const cardElement = createCardElement(card);
+  cardsList[method](cardElement);
+}
 
 initialCards.forEach((card) => {
-  const cardElement = createCardElement(card);
-  cardsList.prepend(cardElement);
+  renderCard(card);
 });
