@@ -109,7 +109,7 @@ const handleOverlayClick = (event) => {
 const openModal = (modal) => {
   const closeBtn = modal.querySelector(".modal__close-btn");
   closeBtn.addEventListener("click", closeModal);
-  modal.addEventListener("click", handleOverlayClick);
+  modal.addEventListener("dblclick", handleOverlayClick);
   document.addEventListener("keydown", handleEscapeKey);
   modal.classList.add(ModalOpened);
 };
@@ -117,7 +117,7 @@ const openModal = (modal) => {
 const closeModal = () => {
   const modal = document.querySelector(`.${ModalOpened}`);
   modal.classList.remove(ModalOpened);
-  modal.removeEventListener("click", handleOverlayClick);
+  modal.removeEventListener("dblclick", handleOverlayClick);
   document.removeEventListener("keydown", handleEscapeKey);
 };
 
@@ -160,7 +160,7 @@ cardModalBtn.addEventListener("click", () => {
 editForm.addEventListener("submit", handleEditFormSubmit);
 cardForm.addEventListener("submit", handleAddCardSubmit);
 
-// TODO-clarify with tutor how to deal with the pasting "a" error when adding cards
+// TODO-clarify with tutor on how to deal with the pasting "a" error when adding cards
 // cardNameInput.addEventListener("input", () => {
 //   checkInputValidity(cardForm, cardNameInput, settings);
 // });
