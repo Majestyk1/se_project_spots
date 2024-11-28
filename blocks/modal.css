@@ -129,7 +129,7 @@
 
 .modal__input {
   border-radius: 8px;
-  border-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid #21212166;
   padding: 16px 12px;
   font-size: 20px;
   font-weight: 500;
@@ -151,6 +151,7 @@
 
 .modal__input:hover {
   cursor: pointer;
+  border: 1px solid #212121;
 }
 
 .modal__input::placeholder {
@@ -182,7 +183,7 @@
 }
 
 .modal__submit-btn_type_disabled {
-  background-color: rgb(33 33 33 / 0.8);
+  background-color: rgb(33 33 33 / 0.5);
 }
 
 @media screen and (max-width: 627px) {
