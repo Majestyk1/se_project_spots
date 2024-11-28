@@ -56,7 +56,7 @@ const cardLinkInput = cardModal.querySelector("#add-card-link-input");
 const previewModal = document.querySelector("#preview-modal");
 const previewModalImageEl = previewModal.querySelector(".modal__image");
 const previewModalCaptionEl = previewModal.querySelector(".modal__caption");
-const MODAL_OPENED = "modal_opened";
+const ModalOpened = "modal_opened";
 
 /* -------------------------------------------------------------------------- */
 /*                                  functions                                 */
@@ -100,7 +100,7 @@ const handleEscapeKey = (event) => {
 };
 
 const handleOverlayClick = (event) => {
-  const modal = document.querySelector(`.${MODAL_OPENED}`);
+  const modal = document.querySelector(`.${ModalOpened}`);
   if (event.target === modal) {
     closeModal();
   }
@@ -108,17 +108,17 @@ const handleOverlayClick = (event) => {
 
 const openModal = (modal) => {
   const closeBtn = modal.querySelector(".modal__close-btn");
-  modal.addEventListener("click", handleOverlayClick);
   closeBtn.addEventListener("click", closeModal);
+  modal.addEventListener("click", handleOverlayClick);
   document.addEventListener("keydown", handleEscapeKey);
-  modal.classList.add(MODAL_OPENED);
+  modal.classList.add(ModalOpened);
 };
 
 const closeModal = () => {
-  const modal = document.querySelector(`.${MODAL_OPENED}`);
+  const modal = document.querySelector(`.${ModalOpened}`);
+  modal.classList.remove(ModalOpened);
   modal.removeEventListener("click", handleOverlayClick);
   document.removeEventListener("keydown", handleEscapeKey);
-  modal.classList.remove(MODAL_OPENED);
 };
 
 const handleEditFormSubmit = (event) => {
@@ -159,6 +159,11 @@ cardModalBtn.addEventListener("click", () => {
 
 editForm.addEventListener("submit", handleEditFormSubmit);
 cardForm.addEventListener("submit", handleAddCardSubmit);
+
+// TODO-clarify with tutor how to deal with the pasting "a" error when adding cards
+// cardNameInput.addEventListener("input", () => {
+//   checkInputValidity(cardForm, cardNameInput, settings);
+// });
 
 /* -------------------------------------------------------------------------- */
 /*                               initialization                               */
