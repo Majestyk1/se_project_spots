@@ -109,7 +109,7 @@ const handleOverlayClick = (event) => {
 const openModal = (modal) => {
   const closeBtn = modal.querySelector(".modal__close-btn");
   closeBtn.addEventListener("click", closeModal);
-  modal.addEventListener("dblclick", handleOverlayClick);
+  modal.addEventListener("mousedown", handleOverlayClick);
   document.addEventListener("keydown", handleEscapeKey);
   modal.classList.add(modalOpened);
 };
@@ -117,7 +117,7 @@ const openModal = (modal) => {
 const closeModal = () => {
   const modal = document.querySelector(`.${modalOpened}`);
   modal.classList.remove(modalOpened);
-  modal.removeEventListener("dblclick", handleOverlayClick);
+  modal.removeEventListener("mousedown", handleOverlayClick);
   document.removeEventListener("keydown", handleEscapeKey);
 };
 
