@@ -7,8 +7,6 @@ const settings = {
   submitButtonSelector: ".modal__submit-btn",
   inactiveButtonClass: "modal__submit-btn_type_disabled",
   inputErrorClass: "modal__input_type_error",
-  // TODO-ask tutor what is this for and if i need it tech im not using it in my .js files only in html and css
-  // errorClass: ".modal__error"
 };
 /* -------------------------------------------------------------------------- */
 /*                                  functions                                 */

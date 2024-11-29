@@ -160,11 +160,6 @@ cardModalBtn.addEventListener("click", () => {
 editForm.addEventListener("submit", handleEditFormSubmit);
 cardForm.addEventListener("submit", handleAddCardSubmit);
 
-// TODO-clarify with tutor on how to deal with the pasting "a" error when adding cards
-// cardNameInput.addEventListener("input", () => {
-//   checkInputValidity(cardForm, cardNameInput, settings);
-// });
-
 /* -------------------------------------------------------------------------- */
 /*                               initialization                               */
 /* -------------------------------------------------------------------------- */
