@@ -56,7 +56,7 @@ const cardLinkInput = cardModal.querySelector("#add-card-link-input");
 const previewModal = document.querySelector("#preview-modal");
 const previewModalImageEl = previewModal.querySelector(".modal__image");
 const previewModalCaptionEl = previewModal.querySelector(".modal__caption");
-const ModalOpened = "modal_opened";
+const modalOpened = "modal_opened";
 
 /* -------------------------------------------------------------------------- */
 /*                                  functions                                 */
