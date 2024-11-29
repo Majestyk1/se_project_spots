@@ -100,7 +100,7 @@ const handleEscapeKey = (event) => {
 };
 
 const handleOverlayClick = (event) => {
-  const modal = document.querySelector(`.${ModalOpened}`);
+  const modal = document.querySelector(`.${modalOpened}`);
   if (event.target === modal) {
     closeModal();
   }
@@ -111,12 +111,12 @@ const openModal = (modal) => {
   closeBtn.addEventListener("click", closeModal);
   modal.addEventListener("dblclick", handleOverlayClick);
   document.addEventListener("keydown", handleEscapeKey);
-  modal.classList.add(ModalOpened);
+  modal.classList.add(modalOpened);
 };
 
 const closeModal = () => {
-  const modal = document.querySelector(`.${ModalOpened}`);
-  modal.classList.remove(ModalOpened);
+  const modal = document.querySelector(`.${modalOpened}`);
+  modal.classList.remove(modalOpened);
   modal.removeEventListener("dblclick", handleOverlayClick);
   document.removeEventListener("keydown", handleEscapeKey);
 };
