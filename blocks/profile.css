@@ -51,7 +51,7 @@
   line-height: 1;
   opacity: 70%;
   transition: opacity 0.3s ease;
-  width: 107.34px;
+  max-width: 107.34px;
 }
 .profile__edit-btn:hover {
   opacity: 100%;

@@ -40,15 +40,15 @@ const profileDescription = document.querySelector(".profile__description");
 
 const editModalBtn = document.querySelector(".profile__edit-btn");
 const cardModalBtn = document.querySelector(".profile__add-btn");
-const closeButtons = document.querySelectorAll(".modal__close-btn");
+const closeBtns = document.querySelectorAll(".modal__close-btn");
 
 const editModal = document.querySelector("#edit-modal");
-const editForm = editModal.querySelector('[name ="edit-profile"]');
+const editForm = document.forms["edit-profile"];
 const nameInput = editModal.querySelector("#profile-name-input");
 const descriptionInput = editModal.querySelector("#profile-description-input");
 
 const cardModal = document.querySelector("#add-card-modal");
-const cardForm = cardModal.querySelector('[name ="add-card-form"]');
+const cardForm = document.forms["add-card-form"];
 const cardSubmitBtn = cardModal.querySelector(".modal__submit-btn");
 const cardNameInput = cardModal.querySelector("#add-card-name-input");
 const cardLinkInput = cardModal.querySelector("#add-card-link-input");
@@ -100,18 +100,15 @@ const handleEscapeKey = (event) => {
 };
 
 const handleOverlayClick = (event) => {
-  const modal = document.querySelector(`.${modalOpened}`);
-  if (event.target === modal) {
+  if (event.target === event.currentTarget) {
     closeModal();
   }
 };
 
 const openModal = (modal) => {
-  const closeBtn = modal.querySelector(".modal__close-btn");
-  closeBtn.addEventListener("click", closeModal);
+  modal.classList.add(modalOpened);
   modal.addEventListener("mousedown", handleOverlayClick);
   document.addEventListener("keydown", handleEscapeKey);
-  modal.classList.add(modalOpened);
 };
 
 const closeModal = () => {
@@ -131,8 +128,7 @@ const handleEditFormSubmit = (event) => {
 const handleAddCardSubmit = (event) => {
   event.preventDefault();
   const inputValue = { name: cardNameInput.value, link: cardLinkInput.value };
-  const cardElement = createCardElement(inputValue);
-  cardsList.prepend(cardElement);
+  renderCard(inputValue);
   event.target.reset();
   disableButton(cardSubmitBtn, settings);
   closeModal();
@@ -155,6 +151,13 @@ editModalBtn.addEventListener("click", () => {
 
 cardModalBtn.addEventListener("click", () => {
   openModal(cardModal);
+});
+
+closeBtns.forEach((button) => {
+  const modal = button.closest(".modal");
+  button.addEventListener("click", () => {
+    closeModal(modal);
+  });
 });
 
 editForm.addEventListener("submit", handleEditFormSubmit);
