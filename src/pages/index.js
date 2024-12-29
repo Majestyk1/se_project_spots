@@ -1,6 +1,12 @@
 /* -------------------------------------------------------------------------- */
 /*                           constants and elements                           */
 /* -------------------------------------------------------------------------- */
+import "./index.css";
+import {
+  settings,
+  enableValidation,
+  resetValidation,
+} from "../scripts/validation.js";
 
 const initialCards = [
   {
@@ -169,3 +175,5 @@ cardForm.addEventListener("submit", handleAddCardSubmit);
 initialCards.forEach((card) => {
   renderCard(card);
 });
+
+enableValidation(settings);
