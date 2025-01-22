@@ -55,4 +55,4 @@ This project focuses on creating a clean and responsive layout using Flexbox and
 **Live Demo**
 
 [Watch the Demo Video](https://drive.google.com/file/d/1qplcxO4ZO_lBPMoE7kLj9ZuK9QLaTG-J/view?usp=drive_link)
-[Spots - Live Demo](https://Majestyk1.github.io/se_project_spots/)
+[Spots - video demo](https://Majestyk1.github.io/se_project_spots/)
