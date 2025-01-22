@@ -52,7 +52,8 @@ This project focuses on creating a clean and responsive layout using Flexbox and
 ![tablet View](./images/screenshots/tablet-view.png)
 ![mobile View](./images/screenshots/mobile-view.png)
 
-**Live Demo**
-
+**Live video**
 [Watch the Demo Video](https://drive.google.com/file/d/1qplcxO4ZO_lBPMoE7kLj9ZuK9QLaTG-J/view?usp=drive_link)
-[Spots - video demo](https://Majestyk1.github.io/se_project_spots/)
+
+**Live demo**
+[Spots - video demo](https://majestyk1.github.io/se_project_spots/)
