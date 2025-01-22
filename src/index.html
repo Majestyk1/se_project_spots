@@ -65,9 +65,9 @@
       </main>
       <footer class="footer">2024 &copy; Spots</footer>
       <div class="modal" id="edit-modal">
-        <div class="modal__container">
+        <div class="modal__container modal__conatiner_type_profile">
           <button type="button" class="modal__close-btn"></button>
-          <h2 class="modal__title">Edit profile</h2>
+          <h2 class="modal__title modal__title_type_profile">Edit profile</h2>
           <form name="edit-profile" class="modal__form" novalidate>
             <label for="profile-name-input" class="modal__label">
               Name
@@ -154,18 +154,20 @@
       </div>
     </div>
     <div class="modal" id="avatar-modal">
-      <div class="modal__container">
+      <div class="modal__container modal__conatiner_type_profile">
         <button type="button" class="modal__close-btn"></button>
-        <h2 class="modal__title">Edit avatar</h2>
+        <h2 class="modal__title modal__title_type_profile">
+          Edit profile avatar
+        </h2>
         <form name="edit-avatar-profile" class="modal__form" novalidate>
           <label for="profile-avatar-input" class="modal__label">
-            Avatar
+            Profile picture
             <input
               id="profile-avatar-input"
               class="modal__input"
               name="avatar"
               type="url"
-              placeholder="avatar goes here"
+              placeholder="Paste the link to an image here"
               required
             />
             <span id="profile-avatar-input-error" class="modal__error"></span>
