@@ -8,7 +8,7 @@
   position: relative;
   margin-right: 20px;
 }
-/* finish styles for avatar button with figma */
+
 .profile__avatar-btn {
   position: absolute;
   width: 100%;
@@ -139,7 +139,6 @@
     text-align: center;
     padding-top: 20px;
   }
-  /* finish mobile view styles for avatar button */
   .profile__avatar-btn {
     visibility: visible;
   }

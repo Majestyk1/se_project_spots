@@ -11,37 +11,6 @@ import {
 import { setButtonText } from "../utils/helpers.js";
 import Api from "../utils/Api.js";
 
-// const initialCards = [
-//   {
-//     name: "Val Thorens",
-//     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/1-photo-by-moritz-feldmann-from-pexels.jpg",
-//   },
-//   {
-//     name: "Restaurant terrace",
-//     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/2-photo-by-ceiline-from-pexels.jpg",
-//   },
-//   {
-//     name: "An outdoor cafe",
-//     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/3-photo-by-tubanur-dogan-from-pexels.jpg",
-//   },
-//   {
-//     name: "A very long bridge, over the forest and through the trees zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",
-//     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/4-photo-by-maurice-laschet-from-pexels.jpg",
-//   },
-//   {
-//     name: "Tunnel with morning light",
-//     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/5-photo-by-van-anh-nguyen-from-pexels.jpg",
-//   },
-//   {
-//     name: "Mountain house",
-//     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
-//   },
-//   {
-//     name: "Beautiful bridge view",
-//     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
-//   },
-// ];
-
 const api = new Api({
   baseUrl: "https://around-api.en.tripleten-services.com/v1",
   headers: {
@@ -56,9 +25,7 @@ api
     cards.forEach((card) => {
       renderCard(card);
     });
-    // set src of avatar img
     profileAvatar.src = userInfo.avatar;
-    // set the txt content of both the txt elements
     profileName.textContent = userInfo.name;
     profileDescription.textContent = userInfo.about;
   })
@@ -143,7 +110,6 @@ const createCardElement = (data) => {
   const cardDeleteBtn = cardElement.querySelector(".card__delete-btn");
   let isLiked = data.isLiked;
 
-  // TODO - if the card is liked, set the active class on the card
   if (isLiked) {
     cardLikeBtn.classList.add("card__like-btn_liked");
   }
@@ -209,8 +175,6 @@ const closeModal = () => {
 
 const handleEditFormSubmit = (event) => {
   event.preventDefault();
-
-  // change textcontent to "saving..."
   const submitBtn = event.submitter;
   setButtonText(submitBtn, true);
 
@@ -223,7 +187,6 @@ const handleEditFormSubmit = (event) => {
     })
     .catch((err) => {
       console.error(err).finally(() => {
-        // change text content back to save
         setButtonText(submitBtn, false);
       });
     });
@@ -300,7 +263,6 @@ closeBtns.forEach((button) => {
     closeModal();
   });
 });
-// select avatar modal button
 avatarModalBtn.addEventListener("click", () => {
   openModal(avatarModal);
 });
