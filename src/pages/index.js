@@ -8,7 +8,7 @@ import {
   resetValidation,
   disableButton,
 } from "../scripts/validation.js";
-import { setButtonText } from "../utils/helpers.js";
+import { renderLoading } from "../utils/helpers.js";
 import Api from "../utils/Api.js";
 
 const api = new Api({
@@ -77,7 +77,7 @@ let selectedCard, selectedCardId;
 const handleDeleteSubmit = (event) => {
   event.preventDefault();
   const submitBtn = event.submitter;
-  setButtonText(submitBtn, true, "Delete", "Deleting...");
+  renderLoading(submitBtn, true, "Delete", "Deleting...");
   api
     .deleteCard(selectedCardId)
     .then(() => {
@@ -90,7 +90,7 @@ const handleDeleteSubmit = (event) => {
       console.error(err);
     })
     .finally(() => {
-      setButtonText(submitBtn, false, "Delete", "Deleting...");
+      renderLoading(submitBtn, false, "Delete", "Deleting...");
     });
 };
 
@@ -176,7 +176,7 @@ const closeModal = () => {
 const handleEditFormSubmit = (event) => {
   event.preventDefault();
   const submitBtn = event.submitter;
-  setButtonText(submitBtn, true);
+  renderLoading(submitBtn, true);
 
   api
     .editUserInfo({ name: nameInput.value, about: descriptionInput.value })
@@ -186,9 +186,10 @@ const handleEditFormSubmit = (event) => {
       closeModal();
     })
     .catch((err) => {
-      console.error(err).finally(() => {
-        setButtonText(submitBtn, false);
-      });
+      console.error(err);
+    })
+    .finally(() => {
+      renderLoading(submitBtn, false);
     });
 };
 
@@ -196,7 +197,7 @@ const handleAddCardSubmit = (event) => {
   event.preventDefault();
 
   const submitBtn = event.submitter;
-  setButtonText(submitBtn, true);
+  renderLoading(submitBtn, true);
 
   const inputValue = { name: cardNameInput.value, link: cardLinkInput.value };
   api
@@ -212,14 +213,14 @@ const handleAddCardSubmit = (event) => {
       alert("Could not add new card");
     })
     .finally(() => {
-      setButtonText(submitBtn, false);
+      renderLoading(submitBtn, false);
     });
 };
 
 const handleAvatarSubmit = (event) => {
   event.preventDefault();
   const submitBtn = event.submitter;
-  setButtonText(submitBtn, true);
+  renderLoading(submitBtn, true);
   api
     .editAvatarInfo({ avatar: avatarInput.value })
     .then((data) => {
@@ -230,7 +231,7 @@ const handleAvatarSubmit = (event) => {
       console.error(err);
     })
     .finally(() => {
-      setButtonText(submitBtn, false);
+      renderLoading(submitBtn, false);
     });
 };
 
@@ -258,7 +259,6 @@ cancelBtn.addEventListener("click", () => {
 });
 
 closeBtns.forEach((button) => {
-  const modal = button.closest(".modal");
   button.addEventListener("click", () => {
     closeModal();
   });

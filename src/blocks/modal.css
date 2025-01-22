@@ -272,10 +272,6 @@
     padding: 0 6px;
   }
 
-  /* .modal__conatiner_type_profile {
-    margin: 12px 12px;
-  } */
-
   .modal__btn-container {
     flex-direction: column;
     gap: 12px;
