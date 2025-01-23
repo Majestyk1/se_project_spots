@@ -33,7 +33,7 @@ This project focuses on creating a clean and responsive layout using Flexbox and
 
 **Features**
 
-- Responsive Layout: Adjusts to desktop, tablet, and mobile screen sizes.
+- Responsive Layout: Adjusts to desktop, tablet, and mobile screens.
 - Photo Cards: Each card displays an image, title, and description for a location.
 - Interactive Elements: Includes hover effects on buttons and links.
 - BEM Methodology: Follows BEM conventions for organized CSS and reusability.
