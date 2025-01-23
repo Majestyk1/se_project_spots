@@ -5,7 +5,6 @@ class Api {
   }
 
   getAppInfo() {
-    // call getUserInfo in this array
     return Promise.all([this.getInitialCards(), this.getUserInfo()]);
   }
 
@@ -22,7 +21,6 @@ class Api {
     }).then(this._checkResponse);
   }
 
-  // create another method, getUserInfo (different base url)
   getUserInfo() {
     return fetch(`${this._baseUrl}/users/me`, {
       headers: this._headers,
@@ -37,7 +35,7 @@ class Api {
         name,
         link,
       }),
-    }).then((res) => this._checkResponse(res));
+    }).then(this._checkResponse);
   }
 
   editUserInfo({ name, about }) {
@@ -48,7 +46,7 @@ class Api {
         name,
         about,
       }),
-    }).then((res) => this._checkResponse(res));
+    }).then(this._checkResponse);
   }
 
   editAvatarInfo({ avatar }) {
@@ -58,21 +56,21 @@ class Api {
       body: JSON.stringify({
         avatar,
       }),
-    }).then((res) => this._checkResponse(res));
+    }).then(this._checkResponse);
   }
 
   deleteCard(id) {
     return fetch(`${this._baseUrl}/cards/${id}`, {
       method: "DELETE",
       headers: this._headers,
-    }).then((res) => this._checkResponse(res));
+    }).then(this._checkResponse);
   }
 
   handleLikeStatus(id, isLiked) {
     return fetch(`${this._baseUrl}/cards/${id}/likes`, {
       method: isLiked ? "DELETE" : "PUT",
       headers: this._headers,
-    }).then((res) => this._checkResponse(res));
+    }).then(this._checkResponse);
   }
 }
 
