@@ -39,11 +39,28 @@
   border-radius: 8px;
 }
 
+.modal__container_type_delete {
+  max-width: 630px;
+  padding: 32px 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .modal__container_type_preview {
   background-color: transparent;
   width: unset;
   max-width: fit-content;
   padding: 0;
+}
+
+.modal__conatiner_type_profile {
+  padding: 32px 50px;
+}
+
+.modal__btn-container {
+  display: flex;
+  gap: 20px;
 }
 
 .modal__image-container {
@@ -98,6 +115,15 @@
   background-repeat: no-repeat;
 }
 
+.modal__close-btn_type_delete {
+  background-image: url("../images/close-light.svg");
+  background-color: transparent;
+  opacity: 1;
+  top: 0;
+  right: -52.5px;
+  position: absolute;
+}
+
 .modal__close-btn_type_preview {
   background-image: url("../images/close-light.svg");
   background-color: transparent;
@@ -116,6 +142,12 @@
   font-weight: 500;
   font-size: 32px;
   line-height: 1;
+}
+
+.modal__title_type_delete {
+  font-size: 24px;
+  align-self: center;
+  text-align: center;
 }
 
 .modal__label {
@@ -183,8 +215,48 @@
   background-color: rgb(33 33 33 / 0.8);
 }
 
+.modal__submit-btn_color_red {
+  background-color: #ff6565;
+  color: #212121;
+}
+
+.modal__submit-btn_color_red:hover {
+  background-color: #ff3333;
+  transition: background-color 0.3s ease;
+}
+
+.modal__button {
+  width: 156px;
+  height: 52px;
+  padding: 18px 0;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #212121;
+  border: 1px solid #212121;
+  transition: background-color 0.3s ease;
+}
+
+.modal__button:hover {
+  background-color: #212121;
+  color: #fff;
+  cursor: pointer;
+}
+
 .modal__submit-btn_type_disabled {
   background-color: rgb(33 33 33 / 0.5);
+}
+
+.modal__form_delete {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+@media screen and (max-width: 820px) {
+  .modal__close-btn_type_delete {
+    top: -45px;
+    right: 0;
+  }
 }
 
 @media screen and (max-width: 627px) {
@@ -198,6 +270,11 @@
 
   .modal__container_type_preview {
     padding: 0 6px;
+  }
+
+  .modal__btn-container {
+    flex-direction: column;
+    gap: 12px;
   }
 
   .modal__image {
@@ -214,9 +291,24 @@
     right: 0;
   }
 
+  .modal__close-btn_type_delete {
+    top: -45px;
+    right: 0;
+  }
+
   .modal__title {
     font-size: 20px;
     margin: 10px 0 34px;
+  }
+
+  .modal__title_type_profile {
+    margin: 8px 0 16px;
+  }
+
+  .modal__title_type_delete {
+    align-self: center;
+    margin: 0;
+    padding: 0 0 20px;
   }
 
   .modal__input {
@@ -225,7 +317,7 @@
   }
 
   .modal__label {
-    margin-bottom: 24px;
+    margin-bottom: 12px;
   }
 
   .modal__submit-btn {
