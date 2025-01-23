@@ -100,9 +100,11 @@
   position: absolute;
   top: 32px;
   right: 50px;
-  width: 40px;
-  height: 40px;
+  width: 23px;
+  height: 23px;
   background-image: url("../images/close-btn.svg");
+  background-position: center;
+  padding: 0;
   border: none;
   background-color: #fff;
   opacity: 0.4;

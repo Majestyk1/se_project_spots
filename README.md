@@ -43,7 +43,7 @@ This project focuses on creating a clean and responsive layout using Flexbox and
 
 - HTML5: Markup structure and semantic tags.
 - CSS3: Styling, Flexbox, and Grid for responsive design.
-- JavaScript (optional, if applicable): For interactive features.
+- JavaScript: For interactive features.
 - BEM Methodology: Organized CSS structure for easy maintenance.
 - Normalize.css: Cross-browser consistency.
 
